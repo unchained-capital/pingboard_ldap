@@ -1,0 +1,22 @@
+---
+
+# Copy this file to 'config.yml' in the same directory and update it
+# appropriately.
+
+#
+# == Pingboard ==
+#
+
+#
+# Your Pingboard client ID
+# 
+pingboard.id:     "INSERT_PINGBOARD_CLIENT_ID"
+
+#
+# Your Pingboard client secret
+# 
+pingboard.secret: "INSERT_PINGBOARD_CLIENT_SECRET"
+
+#
+# == LDAP ==
+#

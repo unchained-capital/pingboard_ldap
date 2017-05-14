@@ -1,3 +1,3 @@
 .virtualenv/*
 *.pyc
-credentials.sh
+config.yml

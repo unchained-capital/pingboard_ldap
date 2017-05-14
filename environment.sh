@@ -26,12 +26,13 @@ else
 fi
 
 #
-# Credentials
+# PYTHONPATH
 #
-CREDENTIALS=`pwd`/credentials.sh
-if [ -e "$CREDENTIALS" ]; then
-    echo "[env]        Sourcing credentials from $CREDENTIALS" >&2
-    . "$CREDENTIALS"
+
+LIB_DIR=`pwd`/lib
+if [ -z $(echo $PYTHONPATH | grep "$LIB_DIR") ]; then
+    echo "[pythonpath] Adding $LIB_DIR to PYTHONPATH (${PYTHONPATH})"
+    export PYTHONPATH="${PYTHONPATH}:${LIB_DIR}"
 else
-    echo "ERROR: Credentials do not exist at ${CREDENTIALS}.  Copy and update the example credentials." >&2
+    echo "[pythonpath] $LIB_DIR already on PYTHONPATH (${PYTHONPATH})"
 fi
